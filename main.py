@@ -9,8 +9,7 @@ def count_words(text):
 def count_chars(text):
     lowercase_alphabet = string.ascii_lowercase
     chars = {}
-    lowered = text.lower()
-    for char in lowered:
+    for char in text.lower():
         if char in chars:
             chars[char] += 1
         elif char in lowercase_alphabet:
@@ -38,7 +37,7 @@ def print_chars(file):
 
 
 def print_report(file_name):
-    file = open_file(f"./{file_name}")
+    file = open_file(file_name)
     print(f"--- Begin report of {file_name} ---")
     print_words(file)
     print("")
